@@ -6,5 +6,5 @@ import io.qameta.atlas.webdriver.extension.FindBy;
 public interface SendMessage extends AtlasWebElement {
 
     @FindBy("//span[text()='Отправить']")
-    WithHeader sendmessage();
+    AtlasWebElement sendMessage();
 }

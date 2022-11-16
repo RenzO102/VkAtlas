@@ -6,5 +6,5 @@ import io.qameta.atlas.webdriver.extension.FindBy;
 public interface Freind extends WriteMessage, AtlasWebElement {
 
     @FindBy("//a[@href='/write163760244']")
-    Freind foundmessage();
+    AtlasWebElement foundMessage();
 }

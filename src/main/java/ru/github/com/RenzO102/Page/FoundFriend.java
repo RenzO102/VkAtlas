@@ -6,11 +6,11 @@ import io.qameta.atlas.webdriver.extension.FindBy;
 public interface FoundFriend extends AtlasWebElement, Freind {
 
     @FindBy("//input[@id='s_search']")
-    FoundFriend foundfriend();
+    AtlasWebElement foundFriend();
 
     @FindBy("//a[text()='Юрий Калинин' and @href='/id4929']")
-    FoundFriend foundperson();
+    AtlasWebElement foundPerson();
 
     @FindBy("//span[text()='Добавить в друзья']")
-    FoundFriend addfreind();
+    AtlasWebElement addFreind();
 }

@@ -6,5 +6,5 @@ import io.qameta.atlas.webdriver.extension.FindBy;
 public interface WriteMessage extends AtlasWebElement, SendMessage {
 
     @FindBy("//div[@id='mail_box_editable']")
-    WriteMessage writemessage();
+    AtlasWebElement writeMessage();
 }

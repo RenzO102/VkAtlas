@@ -21,97 +21,62 @@ public class TestAtlasVk {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         atlas = new Atlas(new WebDriverConfiguration(driver));
+        onMainPage().open("https://vk.com/feed");
+        onMainPage().searchLogin().sendKeys("stson102@ya.ru");
+        onMainPage().buttonNext().click();
+        onMainPage().searchPassword().sendKeys("Omon9876");
+        onMainPage().buttonEnt().click();
     }
 
     @Test
-    @Ignore
-    public void shouldTestAWebSite() {
-        onMainPage().open("https://vk.com/feed");
-        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
-        onMainPage().buttonnext().click();
-        onMainPage().searchpassword().sendKeys("Omon9876");
-        onMainPage().buttonent().click();
-    }
-
-    @Ignore
-    @Test
-    public void shouldTestBMainIcons(){
-        onMainPage().open("https://vk.com/feed");
-        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
-        onMainPage().buttonnext().click();
-        onMainPage().searchpassword().sendKeys("Omon9876");
-        onMainPage().buttonent().click();
-        onMainPage().input("Музыка").click();
-        onMainPage().playmusic().click();
+    public void shouldFoundMusic(){
+        onMainPage().leftMenu("Музыка").click();
+        onMainPage().playMusic().click();
     }
 
     @Ignore
     @Test
-    public void shouldTestCMainIcons(){
-        onMainPage().open("https://vk.com/feed");
-        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
-        onMainPage().buttonnext().click();
-        onMainPage().searchpassword().sendKeys("Omon9876");
-        onMainPage().buttonent().click();
-        onMainPage().input("Сообщества").click();
+    public void shouldFoundGroup(){
+        onMainPage().leftMenu("Сообщества").click();
         onMainPage().searchCom().sendKeys("Рифмы и Панчи");
     }
 
-    @Ignore
+
     @Test
-    public void shouldTestdMainIcons(){
-        onMainPage().open("https://vk.com/feed");
-        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
-        onMainPage().buttonnext().click();
-        onMainPage().searchpassword().sendKeys("Omon9876");
-        onMainPage().buttonent().click();
-        onMainPage().input("Друзья").click();
-        onMainPage().foundmessage().click();
-        onMainPage().writemessage().sendKeys("Привет любимая");
-        onMainPage().sendmessage().click();
+    public void shouldSendLoveMessageToMyPassion(){
+        onMainPage().leftMenu("Друзья").click();
+        onMainPage().foundMessage().click();
+        onMainPage().writeMessage().sendKeys("Вот ты и дома");
+        onMainPage().sendMessage().click();
     }
 
     @Ignore
     @Test
-    public void shouldTestFMainIcons(){
-        onMainPage().open("https://vk.com/feed");
-        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
-        onMainPage().buttonnext().click();
-        onMainPage().searchpassword().sendKeys("Omon9876");
-        onMainPage().buttonent().click();
-        onMainPage().input("Друзья").click();
-        onMainPage().foundfriend().sendKeys("Юрий Калинин");
-        onMainPage().foundperson().click();
-        onMainPage().addfreind().click();
+    public void shouldAddNewFreind(){
+        onMainPage().leftMenu("Друзья").click();
+        onMainPage().foundFriend().sendKeys("Юрий Калинин");
+        onMainPage().foundPerson().click();
+        onMainPage().addFreind().click();
     }
 
     @Ignore
     @Test
-    public void shouldTestGMainIcons(){
-        onMainPage().open("https://vk.com/feed");
-        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
-        onMainPage().buttonnext().click();
-        onMainPage().searchpassword().sendKeys("Omon9876");
-        onMainPage().buttonent().click();
-        onMainPage().input("Фотографии").click();
+    public void ShouldLikeNewMyPhoto(){
+        onMainPage().leftMenu("Фотографии").click();
         onMainPage().photo().click();
         onMainPage().like().click();
     }
 
+    @Ignore
     @Test
-    public void shouldTestHMainIcons(){
-        onMainPage().open("https://vk.com/feed");
-        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
-        onMainPage().buttonnext().click();
-        onMainPage().searchpassword().sendKeys("Omon9876");
-        onMainPage().buttonent().click();
-        onMainPage().input("Фотографии").click();
+    public void shouldAcceptMyPhoto(){
+        onMainPage().leftMenu("Фотографии").click();
         onMainPage().accept().click();
     }
 
     @After
     public void stopDriver() {
-//        this.driver.quit();
+        this.driver.quit();
     }
 
     private MainPage onMainPage() {

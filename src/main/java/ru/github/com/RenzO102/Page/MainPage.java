@@ -6,15 +6,15 @@ import io.qameta.atlas.webdriver.extension.*;
 
 public interface MainPage extends WebPage, WithHeader, FoundGroup, FoundFriend, PhotoLike{
 
-    @FindBy(("//input[@id='index_email']"))
-   AtlasWebElement searchlogin();
+    @FindBy("//input[@id='index_email']")
+   AtlasWebElement searchLogin();
 
-    @FindBy(("//button[@type='submit']"))
-    AtlasWebElement buttonnext();
+    @FindBy("//button[@type='submit']")
+    AtlasWebElement buttonNext();
 
-    @FindBy(("//input[@name='password']"))
-    AtlasWebElement searchpassword();
+    @FindBy("//input[@name='password']")
+    AtlasWebElement searchPassword();
 
-    @FindBy(("//span[@class='vkuiButton__in']"))
-    AtlasWebElement buttonent();
+    @FindBy("//span[@class='vkuiButton__in']")
+    AtlasWebElement buttonEnt();
 }
