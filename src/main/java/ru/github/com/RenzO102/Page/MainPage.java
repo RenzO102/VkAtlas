@@ -4,7 +4,7 @@ import io.qameta.atlas.webdriver.AtlasWebElement;
 import io.qameta.atlas.webdriver.WebPage;
 import io.qameta.atlas.webdriver.extension.*;
 
-public interface MainPage extends WebPage, WithHeader, FoundGroup, FoundFreinds {
+public interface MainPage extends WebPage, WithHeader, FoundGroup, FoundFriend{
 
     @FindBy(("//input[@id='index_email']"))
    AtlasWebElement searchlogin();

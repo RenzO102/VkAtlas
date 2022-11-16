@@ -6,7 +6,7 @@ import io.qameta.atlas.webdriver.WebPage;
 import io.qameta.atlas.webdriver.extension.FindBy;
 import io.qameta.atlas.webdriver.extension.Param;
 
-public interface WithHeader extends AtlasWebElement {
+public interface WithHeader extends AtlasWebElement, FoundSound, FoundFriend{
     @FindBy("//span[text()='{{ text }}']")
     WithHeader input(@Param("text") String text);
 }

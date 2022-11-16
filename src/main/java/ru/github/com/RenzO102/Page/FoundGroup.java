@@ -6,5 +6,5 @@ import io.qameta.atlas.webdriver.extension.FindBy;
 public interface FoundGroup extends AtlasWebElement {
 
     @FindBy("//input[@id='groups_list_search']")
-    WithHeader searchCom();
+    FoundGroup searchCom();
 }

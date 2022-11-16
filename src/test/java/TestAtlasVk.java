@@ -33,7 +33,7 @@ public class TestAtlasVk {
         onMainPage().buttonent().click();
     }
 
-   @Ignore
+    @Ignore
     @Test
     public void shouldTestBMainIcons(){
         onMainPage().open("https://vk.com/feed");
@@ -42,6 +42,7 @@ public class TestAtlasVk {
         onMainPage().searchpassword().sendKeys("Omon9876");
         onMainPage().buttonent().click();
         onMainPage().input("Музыка").click();
+        onMainPage().playmusic().click();
     }
 
     @Ignore
@@ -56,7 +57,7 @@ public class TestAtlasVk {
         onMainPage().searchCom().sendKeys("Рифмы и Панчи");
     }
 
-
+    @Ignore
     @Test
     public void shouldTestdMainIcons(){
         onMainPage().open("https://vk.com/feed");
@@ -69,6 +70,21 @@ public class TestAtlasVk {
         onMainPage().writemessage().sendKeys("Привет любимая");
         onMainPage().sendmessage().click();
     }
+
+    @Ignore
+    @Test
+    public void shouldTestFMainIcons(){
+        onMainPage().open("https://vk.com/feed");
+        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
+        onMainPage().buttonnext().click();
+        onMainPage().searchpassword().sendKeys("Omon9876");
+        onMainPage().buttonent().click();
+        onMainPage().input("Друзья").click();
+        onMainPage().foundfriend().sendKeys("Юрий Калинин");
+        onMainPage().foundperson().click();
+        onMainPage().addfreind().click();
+    }
+
     @After
     public void stopDriver() {
 //        this.driver.quit();

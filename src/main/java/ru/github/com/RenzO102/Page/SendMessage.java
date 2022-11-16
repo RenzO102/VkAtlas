@@ -7,5 +7,4 @@ public interface SendMessage extends AtlasWebElement {
 
     @FindBy("//span[text()='Отправить']")
     WithHeader sendmessage();
-
 }
