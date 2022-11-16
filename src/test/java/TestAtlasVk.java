@@ -85,6 +85,30 @@ public class TestAtlasVk {
         onMainPage().addfreind().click();
     }
 
+    @Ignore
+    @Test
+    public void shouldTestGMainIcons(){
+        onMainPage().open("https://vk.com/feed");
+        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
+        onMainPage().buttonnext().click();
+        onMainPage().searchpassword().sendKeys("Omon9876");
+        onMainPage().buttonent().click();
+        onMainPage().input("Фотографии").click();
+        onMainPage().photo().click();
+        onMainPage().like().click();
+    }
+
+    @Test
+    public void shouldTestHMainIcons(){
+        onMainPage().open("https://vk.com/feed");
+        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
+        onMainPage().buttonnext().click();
+        onMainPage().searchpassword().sendKeys("Omon9876");
+        onMainPage().buttonent().click();
+        onMainPage().input("Фотографии").click();
+        onMainPage().accept().click();
+    }
+
     @After
     public void stopDriver() {
 //        this.driver.quit();
