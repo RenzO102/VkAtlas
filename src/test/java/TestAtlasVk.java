@@ -33,6 +33,7 @@ public class TestAtlasVk {
         onMainPage().buttonent().click();
     }
 
+   @Ignore
     @Test
     public void shouldTestBMainIcons(){
         onMainPage().open("https://vk.com/feed");
@@ -40,9 +41,34 @@ public class TestAtlasVk {
         onMainPage().buttonnext().click();
         onMainPage().searchpassword().sendKeys("Omon9876");
         onMainPage().buttonent().click();
-        onMainPage().input("Друзья").click();
+        onMainPage().input("Музыка").click();
     }
 
+    @Ignore
+    @Test
+    public void shouldTestCMainIcons(){
+        onMainPage().open("https://vk.com/feed");
+        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
+        onMainPage().buttonnext().click();
+        onMainPage().searchpassword().sendKeys("Omon9876");
+        onMainPage().buttonent().click();
+        onMainPage().input("Сообщества").click();
+        onMainPage().searchCom().sendKeys("Рифмы и Панчи");
+    }
+
+
+    @Test
+    public void shouldTestdMainIcons(){
+        onMainPage().open("https://vk.com/feed");
+        onMainPage().searchlogin().sendKeys("stson102@ya.ru");
+        onMainPage().buttonnext().click();
+        onMainPage().searchpassword().sendKeys("Omon9876");
+        onMainPage().buttonent().click();
+        onMainPage().input("Друзья").click();
+        onMainPage().foundmessage().click();
+        onMainPage().writemessage().sendKeys("Привет любимая");
+        onMainPage().sendmessage().click();
+    }
     @After
     public void stopDriver() {
 //        this.driver.quit();
