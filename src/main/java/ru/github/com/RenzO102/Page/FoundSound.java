@@ -7,5 +7,4 @@ public interface FoundSound extends AtlasWebElement {
 
     @FindBy("//button[@class='audio_page_player_ctrl audio_page_player_play _audio_page_player_play']")
     AtlasWebElement playMusic();
-
 }
